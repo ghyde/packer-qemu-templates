@@ -15,9 +15,9 @@
             "accelerator": "kvm",
             "disk_size": "{{ user `disk_size`}}",
 
-            "iso_url": "http://mirror.tocici.com/centos/6.7/isos/x86_64/CentOS-6.7-x86_64-minimal.iso",
-            "iso_checksum": "9381a24b8bee2fed0c26896141a64b69",
-            "iso_checksum_type": "md5",
+            "iso_url": "http://mirrors.tummy.com/mirrors/CentOS/6/isos/x86_64/CentOS-6.7-x86_64-minimal.iso",
+            "iso_checksum": "9d3fec5897be6b3fed4d3dda80b8fa7bb62c616bbfd4bdcd27295ca9b764f498",
+            "iso_checksum_type": "sha256",
 
             "http_directory": "http",
 
@@ -28,7 +28,7 @@
 
             "boot_wait": "2s",
             "boot_command": [
-               "<tab> text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/ks.cfg<enter><wait>"   
+               "<tab> text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/ks.cfg<enter><wait>"
             ]
         }
     ],
