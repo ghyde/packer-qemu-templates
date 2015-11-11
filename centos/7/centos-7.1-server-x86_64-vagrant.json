@@ -9,7 +9,6 @@
     [
         {
             "name": "centos-7.1-x86_64-server-vagrant",
-
             "type": "qemu",
             "format": "qcow2",
             "accelerator": "kvm",
@@ -23,12 +22,12 @@
 
             "ssh_username": "{{user `user`}}",
             "ssh_password": "{{user `password`}}",
-            "ssh_wait_timeout": "10m",
+            "ssh_wait_timeout": "15m",
             "shutdown_command": "echo '{{user `password`}}'|sudo -S shutdown -P now",
 
             "boot_wait": "2s",
             "boot_command": [
-               "<tab> text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/ks.cfg<enter><wait>"
+               "<tab> text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/ks_minimal.cfg<enter><wait>"
             ]
         }
     ],

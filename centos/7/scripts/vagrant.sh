@@ -5,7 +5,10 @@ date > /etc/vagrant_box_build_time
 
 # Install vagrant key
 mkdir -pm 700 /home/vagrant/.ssh
-curl -L https://raw.github.com/mitchellh/vagrant/master/keys/vagrant.pub -o /home/vagrant/.ssh/authorized_keys
+
+cat << EOF > /home/vagrant/.ssh/authorized_keys
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC5s48zKOWlNV6AWlITraneuEBy6x56j0WkISPjnhXf0aPzJ8H8s7alS4+J02JiBxaaFay5cM+qQKJMTGhT5Y8OYVTvGYydBDxG8cww1FBPkwcZGniPOv5L1uNRwQF3LSIGHWFnavNqjonuQAZogW5TBSMLcWwh7JH0ahAytDbrF86YWES4mYf458XfpfVurcDBcn6ACghLDT1URmi9bZioX4tfW2k4nb5t++jpdF596d6+Jdpl49+VUY9VOE863x5dW/TQVVaCGT1orEL9LOve4KNZbp6DcLezIDnOmuAvDflSaBnIiYWACcQ80RW+3omeiWbB5ez2PaPgs06vXlgO4Ki8qEGTU3/Rnl1gKqMLfrGfpWT7Tp/d9dr5bpusKXbEMZ/28ZlMubYSB1RoA5vpS6duZVFl2qGSoyDwnrvsOr7rKOyz7gX+FaJ46PaZ6gSGcpmPj+CkdLyHwIjYlhsaPa0XPRmqjOWPsHQ3/Mql7yU2wjl1bOr5K+/ZUhVmKPxJY0QN3idZCSE1iaLMUXyLx/6XLxO5KuI3kKmaj6Bn0TOLBgjkYD1uQ3RAZkhPs4pNWLBFjpVFkBY34AgeXxLgwWSq7ftZ/CHSVor7EDkmnsxg9qFvMIsh/WWlD6yD1qCJD5heDMAfVif3r+tm5Wj2pbbBsSs2vxmhc0lh0ieNhQ== /home/clints/.ssh/fedora_rsa
+EOF
 chmod 0600 /home/vagrant/.ssh/authorized_keys
 chown -R vagrant:vagrant /home/vagrant/.ssh
 
