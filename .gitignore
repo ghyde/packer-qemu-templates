@@ -4,3 +4,4 @@ iso
 *.box
 *.img
 .*sw*
+box/
