@@ -39,6 +39,7 @@
             "scripts": [
                 "scripts/update.sh",
                 "scripts/vagrant.sh",
+                "scripts/salt-config.sh",
                 "scripts/cleanup.sh"
             ]
         }
