@@ -55,7 +55,9 @@
                 "scripts/update.sh",
                 "scripts/packages.sh",
                 "scripts/network.sh",
-                "scripts/vagrant.sh"
+                "scripts/salt-config.sh",
+                "scripts/vagrant.sh",
+                "scripts/cleanup.sh"
             ]
         }
     ],

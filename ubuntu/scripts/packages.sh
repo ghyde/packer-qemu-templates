@@ -7,5 +7,8 @@ slurm
 tcpdump
 unzip
 vim-nox
+nfs-common
+salt-minion
+python-nose
 "
-apt-get -y install $PACKAGES
+apt-get -y --force-yes install $PACKAGES
