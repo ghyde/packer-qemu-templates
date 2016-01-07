@@ -64,6 +64,12 @@
         <startmode>auto</startmode>
         <usercontrol>no</usercontrol>
       </interface>
+      <interface>
+        <bootproto>dhcp</bootproto>
+        <device>eth1</device>
+        <startmode>auto</startmode>
+        <usercontrol>no</usercontrol>
+      </interface>
     </interfaces>
   </networking>
 
@@ -71,6 +77,26 @@
     <drive>
       <device>/dev/vda</device>
       <initialize config:type="boolean">true</initialize>
+      <partitions config:type="list">
+        <partition>
+          <label>swap</label>
+          <mount>swap</mount>
+          <filesystem config:type="symbol">swap</filesystem>
+          <size>2G</size>
+        </partition>
+        <partition>
+          <label>var</label>
+          <mount>/var</mount>
+          <filesystem config:type="symbol">ext4</filesystem>
+          <size>6G</size>
+        </partition>
+        <partition>
+          <label>root</label>
+          <mount>/</mount>
+          <filesystem config:type="symbol">ext4</filesystem>
+          <size>max</size>
+        </partition>
+      </partitions>
       <use>all</use>
     </drive>
   </partitioning>
