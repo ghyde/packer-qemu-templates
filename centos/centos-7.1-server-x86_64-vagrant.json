@@ -46,10 +46,18 @@
     ],
 
     "post-processors": [
-        {
+        [{
             "keep_input_artifact": false,
             "output": "box/centos-7.1_x86_64-server.box",
             "type": "vagrant"
-        }
+        },
+        {
+            "type": "atlas",
+            "artifact": "herlo/centos71",
+            "artifact_type": "vagrant.box",
+            "metadata": {
+                "provider": "libvirt"
+            }
+        }]
     ]
 }
